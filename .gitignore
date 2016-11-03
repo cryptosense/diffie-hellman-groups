@@ -1,0 +1,4 @@
+*.py[cod]
+.coverage
+__pycache__
+venv
