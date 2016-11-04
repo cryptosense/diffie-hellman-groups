@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 import base64
 import binascii
 import json
@@ -1107,4 +1109,5 @@ common_groups = (
 )
 
 if __name__ == '__main__':
-    print(json.dumps(common_groups, indent=4))
+    output = {'data': common_groups}
+    print(json.dumps(output, indent=4))
