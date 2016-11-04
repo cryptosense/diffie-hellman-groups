@@ -20,9 +20,14 @@ where `p` is the group as a decimal integer and `length` is the bit-length of th
 This work is motivated by key exchange weaknesses due to commonly-shared Diffie-Hellman
 groups being used, such as pointed out on [weakdh.org][weakdh].
 
+Cryptosense tests for these groups on TLS and SSH servers at
+[discovery.cryptosense.com][discovery] and in applications in its [Analyzer][analyzer].
+
 ## Contributing
 
 If you found a group used by some piece of software which is not in the list, please open an
 issue or a pull request.
 
 [weakdh]: https://weakdh.org/
+[discovery]: https://discovery.cryptosense.com/
+[analyzer]: https://cryptosense.com/analyzer/
