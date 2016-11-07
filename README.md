@@ -8,12 +8,14 @@ form:
 ```json
 {
     "name": "Oakley 1 from RFC 2409, 768-bit",
+    "g": 2,
     "p": 1552518092300708935130918131258481755631334049434514313202351194902966239949102107258669453876591642442910007680288864229150803718918046342632727613031282983744380820890196288509170691316593175367469551763119843371637221007210577919,
     "length": 768
 }
 ```
 
-where `p` is the group as a decimal integer and `length` is the bit-length of the group.
+where `p` is the integer definining the group, `g` is a generator of this group and
+`length` is the bit-length of `p`.
 
 ## Why?
 
