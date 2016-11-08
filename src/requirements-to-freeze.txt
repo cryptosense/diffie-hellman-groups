@@ -1,1 +1,2 @@
+basehash==3.0.4
 pyasn1==0.1.9
