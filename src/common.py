@@ -684,9 +684,9 @@ groups = (
             "2935630e1c2062354d0da20a6c416e50be794ca4",
         ),
         p=int_from_hex(
-            "fca681ce8e12caba26efccf7110e526db078b05edecb"
-            "cd1eb4a208f3ae1617ae01f35b91a47e6df63413c5e1"
-            "2ed0899bcd132acd50d99151bdc43ee737592e17",
+            'fca682ce8e12caba26efccf7110e526db078b05edecb'
+            'cd1eb4a208f3ae1617ae01f35b91a47e6df63413c5e1'
+            '2ed0899bcd132acd50d99151bdc43ee737592e17',
         ),
         length=512,
     ),
