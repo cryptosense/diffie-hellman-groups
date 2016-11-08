@@ -6,6 +6,7 @@ import json
 import re
 from collections import namedtuple
 
+from basehash.primes import baillie_psw
 import pyasn1.codec.ber.decoder
 
 
@@ -79,6 +80,15 @@ class Group(namedtuple('GroupBase', 'name g p length')):
         binary = base64.b64decode(pem_body)
         params = params_from_ber(binary)
         return cls(name=name, g=params.g, p=params.p, length=length)
+
+
+def additional_info(group):
+    prime = baillie_psw(group.p)
+    safe_prime = prime and baillie_psw((group.p - 1) // 2)
+    return {
+        'prime': prime,
+        'safe_prime': safe_prime,
+    }
 
 
 groups = (
@@ -1659,5 +1669,7 @@ groups = (
 )
 
 if __name__ == '__main__':
-    output = {'data': tuple(group.to_dict() for group in groups)}
+    output = {
+        'data': tuple(dict(group.to_dict(), **additional_info(group)) for group in groups),
+    }
     print(json.dumps(output, indent=4, sort_keys=True))

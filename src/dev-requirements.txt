@@ -1,2 +1,4 @@
+BaseHash==3.0.4
 isort==4.2.5
 pyasn1==0.1.9
+six==1.10.0
